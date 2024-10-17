@@ -12,3 +12,108 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes slideArrow {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translateX(4px);
+    }
+}
+
+@keyframes opacitySparks {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sizeHeart {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.sparks {
+  opacity: 0%;
+}
+
+.card__icon-button .core {
+  fill: transparent;
+  transition: fill 0.3s ease-in 0.03s;  
+}
+
+.card__icon-button .main-body {
+  fill: transparent;
+  transition: fill 0.3s ease-in;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--heart-contour);
+  transition: fill 0.3s ease-in;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--heart-contour);
+  transition: fill 0.3s ease-in 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--heart__main-color);
+  transition: fill 0.3s ease-in;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--heart__main-color);
+  transition: fill 0.3s ease-in 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart__main-color);
+  transition: fill 0.3s ease-in;
+}
+
+.is-liked .main-body {
+  fill: var(--heart__main-color);
+  transition: fill 0.3s ease-in 0.05s;
+}
+
+.is-liked .contour {
+  fill: var(--heart__main-color);
+  transition: fill 0.3s ease-in 0.06s;
+}
+
+.is-liked .heart {
+  transform-origin: center;
+  animation: sizeHeart 0.3s ease-in 0.1s alternate;
+}
+
+.is-liked .sparks {
+  animation: opacitySparks 0.3s ease-in 0.3s alternate;
+}
+
+.is-liked:hover .core {
+  fill: var(--heart__main-color);
+  transition: fill 0.1s ease-in;
+}
+
+.is-liked:hover .main-body {
+  fill: var(--heart__main-color);
+}
