@@ -23,20 +23,20 @@
 }
 
 @keyframes opacitySparks {
-  from { 
-    opacity: 0%; 
+  from {
+    opacity: 0%;
   }
-  to { 
-    opacity: 100%; 
+  to {
+    opacity: 100%;
   }
 }
 
 @keyframes sizeHeart {
-  from { 
-    transform: scale(1); 
+  from {
+    transform: scale(1);
   }
-  to { 
-    transform: scale(1.5); 
+  to {
+    transform: scale(1.5);
   }
 }
 
